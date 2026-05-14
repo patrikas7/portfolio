@@ -1,0 +1,120 @@
+@import 'tailwindcss';
+
+@layer base {
+    :root {
+        --font-sans: 'DM Sans', system-ui, sans-serif;
+        --font-mono: 'DM Mono', monospace;
+
+        --color-hero: #0a0a0e;
+        --color-hero-secondary: #12121a;
+        --color-hero-deep: #162d4a;
+
+        --color-accent: #5b6fff;
+        --color-accent-muted: #a8c4e0;
+        --color-accent-subtle: #7bafd4;
+
+        --color-surface-primary: #ffffff;
+        --color-surface-secondary: #f7f8fa;
+        --color-surface-card: #ffffff;
+
+        --color-border: #e2e8f0;
+        --color-border-medium: #cbd5e0;
+        --color-border-dark: rgba(255, 255, 255, 0.08);
+        --color-border-dark-hover: rgba(255, 255, 255, 0.15);
+
+        --color-text-primary: #1a1a2e;
+        --color-text-secondary: #4a5568;
+        --color-text-tertiary: #718096;
+        --color-text-muted: #a0aec0;
+
+        --color-on-dark-primary: #ffffff;
+        --color-on-dark-secondary: rgba(255, 255, 255, 0.55);
+        --color-on-dark-tertiary: rgba(255, 255, 255, 0.25);
+
+        --nav-height: 60px;
+        --section-px: 3rem;
+        --section-py: 6rem;
+
+        --radius-card: 12px;
+        --radius-tag: 20px;
+        --radius-btn: 6px;
+        --radius-input: 8px;
+        --radius-lg: 10px;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-sans);
+        background-color: var(--color-surface-primary);
+        color: var(--color-text-primary);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection {
+        background: var(--color-accent);
+        color: #fff;
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--color-border-medium);
+        border-radius: 99px;
+    }
+}
+
+@layer utilities {
+    .section-padding {
+        padding: var(--section-py) var(--section-px);
+    }
+
+    .bg-section-light {
+        background-color: var(--color-surface-primary);
+    }
+    .bg-section-muted {
+        background-color: var(--color-surface-secondary);
+    }
+    .bg-hero {
+        background-color: var(--color-hero);
+    }
+
+    .label-text {
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        font-weight: 500;
+        color: var(--color-text-tertiary);
+        text-transform: uppercase;
+    }
+
+    .tag {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: var(--radius-tag);
+        font-size: 11px;
+        background: var(--color-surface-secondary);
+        color: var(--color-text-secondary);
+        border: 0.5px solid var(--color-border);
+        margin: 3px 3px 3px 0;
+    }
+
+    .border-thin {
+        border: 0.5px solid var(--color-border);
+    }
+    .border-thin-dark {
+        border: 0.5px solid var(--color-border-dark);
+    }
+}
