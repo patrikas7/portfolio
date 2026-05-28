@@ -4,5 +4,86 @@
         "experience": "Experience",
         "technology": "Technology",
         "contacts": "Contacts"
+    },
+    "hero": {
+        "badge": "Available for freelance projects",
+        "name": "Patrikas",
+        "role": "Full-stack developer",
+        "description": "4+ years of experience building modern web applications using React, Next.js and Node.js.",
+        "ctaPrimary": "Contact me",
+        "ctaSecondary": "View experience"
+    },
+    "about": {
+        "label": "About me",
+        "title": "A bit about myself",
+        "paragraph1": "I'm a frontend developer with full-stack experience, currently working at Oxylabs.io and open to freelance projects. Over the past 2 years I've balanced a full-time role with up to 30h/week of freelance work — architecting SaaS products, integrating payment systems, and building complete solutions from scratch.",
+        "paragraph2": "I enjoy building fast, clean, and well-structured projects. I work diligently and communicate clearly.",
+        "stat1": "Years of experience",
+        "stat2": "Successful freelance projects",
+        "stat3": "Max freelance per week",
+        "stat4": "Architecture experience"
+    },
+    "experience": {
+        "label": "Experience",
+        "title": "Where I've worked",
+
+        "fulltime": "Full-time",
+        "freelance": "Freelance",
+
+        "role_oxylabs": "Frontend Developer",
+        "role_festo": "Frontend Developer",
+        "role_saas": "Freelance — SaaS product",
+        "role_web": "Freelance — Web project",
+        "role_toughlex": "Full-Stack Developer",
+        "role_festo_junior": "Frontend Developer",
+
+        "festo_b1": "JS → TypeScript migration",
+        "festo_b2": "Bundle size optimisation",
+        "festo_b3": "React version upgrades",
+
+        "saas_b1": "Full SaaS architecture from scratch",
+        "saas_b2": "Stripe payments, role management",
+        "saas_b3": "Admin subsystem, i18n, Headless CMS",
+
+        "web_b1": "Next.js with Headless CMS integration",
+        "web_b2": "Internationalisation and responsive design",
+
+        "toughlex_b1": "Frontend and backend feature development",
+        "toughlex_b2": "React frontend, Node.js/Express backend",
+
+        "festo_junior_b1": "UI component development and maintenance",
+        "festo_junior_b2": "Collaboration with backend team"
+    },
+    "techStack": {
+        "label": "Tech Stack",
+        "title": "What I work with",
+        "frontend": "Frontend",
+        "backend": "Backend & DB",
+        "tools": "Tools & Integrations"
+    },
+    "contact": {
+        "label": "Contact",
+        "title": "Get in touch",
+        "description": "Have a project or question? Reach out - reply within 24h.",
+        "formName": "Name",
+        "namePlaceholder": "Your name",
+        "formEmail": "Email",
+        "emailPlaceholder": "Your email",
+        "formMessage": "Message",
+        "messagePlaceholder": "Your message",
+        "submitButton": "Send message",
+        "validation": {
+            "name": {
+                "min": "Name must be at least 2 characters",
+                "max": "Name must be less than 100 characters"
+            },
+            "email": {
+                "invalid": "Please enter a valid email address"
+            },
+            "message": {
+                "min": "Message must be at least 10 characters",
+                "max": "Message must be less than 5000 characters"
+            }
+        }
     }
 }

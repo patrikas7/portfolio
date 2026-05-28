@@ -1,9 +1,16 @@
-import { useTranslations } from 'next-intl';
+import About from '@/components/about/About';
+import Contact from '@/components/contact/Contact';
+import Experience from '@/components/experience/Experience';
+import Hero from '@/components/hero/Hero';
+import TechStack from '@/components/techStack/TechStack';
 
-export default function Home() {
-    const t = useTranslations('header');
-
-    console.log(t('aboutMe'));
-
-    return <h1>Test</h1>;
-}
+export const Home = () => (
+    <>
+        <Hero />
+        <About />
+        <Experience />
+        <TechStack />
+        <Contact />
+    </>
+);
+export default Home;

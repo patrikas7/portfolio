@@ -3,6 +3,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import '../../globals.css';
 
 import { DM_Sans, DM_Mono } from 'next/font/google';
+import Header from '@/components/header/Header';
+import Footer from '@/components/footer/Footer';
 
 const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-sans', weight: ['400', '500', '600'] });
 const dmMono = DM_Mono({ subsets: ['latin'], variable: '--font-mono', weight: ['400'] });
@@ -20,7 +22,11 @@ export default function RootLayout({
     return (
         <html lang='en' className={`${dmSans.variable} ${dmMono.variable} h-full antialiased`}>
             <body className='min-h-full flex flex-col'>
-                <NextIntlClientProvider>{children}</NextIntlClientProvider>
+                <NextIntlClientProvider>
+                    <Header />
+                    {children}
+                    <Footer />
+                </NextIntlClientProvider>
             </body>
         </html>
     );

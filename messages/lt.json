@@ -4,5 +4,87 @@
         "experience": "Patirtis",
         "technology": "Technologijos",
         "contacts": "Kontaktai"
+    },
+    "hero": {
+        "badge": "Prieinamas freelance projektams",
+        "name": "Patrikas",
+        "role": "Full-stack kūrėjas",
+        "description": "4+ metų patirtis kuriant modernius web taikymus naudojant React, Next.js ir Node.js.",
+        "ctaPrimary": "Susisiekite",
+        "ctaSecondary": "Peržiūrėti patirtį"
+    },
+    "about": {
+        "label": "Apie mane",
+        "title": "Šiek tiek apie save",
+        "paragraph1": "Aš frontend kūrėjas su full-stack patirtimi, šiuo metu dirbantis Oxylabs.io ir atidaras freelance projektams. Pastaraisiais dviem metais subalansinau etatinį darbą su iki 30 val./savaitę atlikt freelance darbu — architektūrindamas SaaS produktus, integruodamas mokėjimo sistemas ir konstruodamas pilnus sprendimus nuo nulio.",
+        "paragraph2": "Man patinka kurti greitus, švarius ir gerai struktūrizuotus projektus. Dirbu atidžiai ir bendrauju aiškiai.",
+        "stat1": "Metų patirtis",
+        "stat2": "Sėkmingi freelance projektai",
+        "stat3": "Maks. freelance per savaitę",
+        "stat4": "Architektūros patirtis"
+    },
+    "experience": {
+        "label": "Patirtis",
+        "title": "Kur dirbau",
+
+        "fulltime": "Etatinis",
+        "freelance": "Freelance",
+
+        "role_oxylabs": "Frontend Developer",
+        "role_festo": "Frontend Developer",
+        "role_saas": "Freelance — SaaS produktas",
+        "role_web": "Freelance — Web projektas",
+        "role_toughlex": "Full-Stack Developer",
+        "role_festo_junior": "Frontend Developer",
+
+        "festo_b1": "JS → TypeScript migracija",
+        "festo_b2": "Bundle optimizacija",
+        "festo_b3": "React versijų atnaujinimai",
+
+        "saas_b1": "Pilna SaaS architektūra nuo nulio",
+        "saas_b2": "Stripe mokėjimai, rolių valdymas",
+        "saas_b3": "Admin posistemė, i18n, Headless CMS",
+
+        "web_b1": "Next.js su Headless CMS integracija",
+        "web_b2": "Internacionalizacija ir responsive dizainas",
+
+        "toughlex_b1": "Frontend ir backend funkcijų kūrimas",
+        "toughlex_b2": "React frontend, Node.js/Express backend",
+
+        "festo_junior_b1": "UI komponentų kūrimas ir priežiūra",
+        "festo_junior_b2": "Bendradarbiavimas su backend komanda"
+    },
+    "techStack": {
+        "label": "Technologijos",
+        "title": "Su kuo dirbu",
+        "frontend": "Frontend",
+        "backend": "Backend & DB",
+        "tools": "Įrankiai ir integracijos"
+    },
+    "contact": {
+        "label": "Kontaktai",
+        "title": "Susisiekime",
+        "description": "Turi projektą ar klausimą? Parašyk — atsakau per 24 val.",
+        "formName": "Vardas",
+        "formEmail": "El. paštas",
+        "formMessage": "Žinutė",
+        "namePlaceholder": "Jonas",
+        "emailPlaceholder": "jonas@email.lt",
+        "messagePlaceholder": "Aprašyk projektą...",
+        "submitButton": "Siųsti žinutę",
+        "submitting": "Siunčiama...",
+        "email": "patrikas@gmail.com",
+        "linkedin": "linkedin.com/in/patrikas-voicechovski",
+        "location": "Lietuva"
+    },
+    "footer": {
+        "tagline": "Frontend kūrėjas, prieinamas freelance projektams.",
+        "navigation": "Navigacija",
+        "aboutMe": "Apie mane",
+        "experience": "Patirtis",
+        "technology": "Technologijos",
+        "contacts": "Kontaktai",
+        "contact": "Kontaktai",
+        "location": "Vilnius, Lietuva"
     }
 }
