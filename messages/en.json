@@ -3,6 +3,7 @@
         "aboutMe": "About Me",
         "experience": "Experience",
         "technology": "Technology",
+        "services": "Services",
         "contacts": "Contacts"
     },
     "hero": {
@@ -61,10 +62,36 @@
         "backend": "Backend & DB",
         "tools": "Tools & Integrations"
     },
+    "services": {
+        "label": "Services",
+        "title": "What I can build",
+        "card1Title": "Web Application",
+        "card1Desc": "Placeholder — describe the web application service here.",
+        "card1_b1": "Placeholder deliverable 1",
+        "card1_b2": "Placeholder deliverable 2",
+        "card1_b3": "Placeholder deliverable 3",
+        "card2Title": "SaaS Product",
+        "card2Desc": "Placeholder — describe the SaaS product service here.",
+        "card2_b1": "Placeholder deliverable 1",
+        "card2_b2": "Placeholder deliverable 2",
+        "card2_b3": "Placeholder deliverable 3",
+        "card3Title": "Marketing Site",
+        "card3Desc": "Placeholder — describe the marketing site service here.",
+        "card3_b1": "Placeholder deliverable 1",
+        "card3_b2": "Placeholder deliverable 2",
+        "card3_b3": "Placeholder deliverable 3",
+        "card4Title": "Mobile App",
+        "card4Desc": "Placeholder — describe the mobile app service here.",
+        "card4_b1": "Placeholder deliverable 1",
+        "card4_b2": "Placeholder deliverable 2",
+        "card4_b3": "Placeholder deliverable 3"
+    },
     "contact": {
         "label": "Contact",
         "title": "Get in touch",
         "description": "Have a project or question? Reach out - reply within 24h.",
+        "availability": "Available for opportunities",
+        "contactIntro": "Open to freelance projects and full-time roles. I respond to all messages within 24 hours.",
         "formName": "Name",
         "namePlaceholder": "Your name",
         "formEmail": "Email",
@@ -72,6 +99,12 @@
         "formMessage": "Message",
         "messagePlaceholder": "Your message",
         "submitButton": "Send message",
+        "submitting": "Sending...",
+        "opensInNewTab": "opens in new tab",
+        "successTitle": "Message sent!",
+        "successMessage": "Thanks for reaching out. I'll get back to you within 24 hours.",
+        "sendAnother": "Send another message",
+        "errorMessage": "Something went wrong. Please try again or email me directly.",
         "validation": {
             "name": {
                 "min": "Name must be at least 2 characters",

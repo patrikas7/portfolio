@@ -1,5 +1,38 @@
 @import 'tailwindcss';
 
+/*
+  @utility — registers custom utilities with Tailwind v4's variant engine.
+  Classes in @layer utilities are static-only; they do NOT get hover:, focus:,
+  group-hover:, dark: etc. variants generated for them.
+  Everything listed here can be used with any variant prefix.
+*/
+
+/* Accent fills */
+@utility bg-accent          { background-color: var(--color-accent); }
+@utility bg-accent-muted    { background-color: var(--color-accent-muted); }
+@utility bg-accent-subtle   { background-color: var(--color-accent-subtle); }
+@utility bg-accent-ghost    { background-color: var(--color-accent-ghost); }
+
+/* Accent borders */
+@utility border-accent        { border-color: var(--color-accent); }
+@utility border-accent-muted  { border-color: var(--color-accent-muted); }
+@utility border-accent-subtle { border-color: var(--color-accent-subtle); }
+@utility border-accent-dim    { border-color: var(--color-accent-dim); }
+
+/* Accent text */
+@utility text-accent       { color: var(--color-accent); }
+@utility text-accent-muted { color: var(--color-accent-muted); }
+
+/* On-dark text */
+@utility text-snow           { color: var(--color-on-dark-primary); }
+@utility text-snow-secondary { color: var(--color-on-dark-secondary); }
+@utility text-snow-tertiary  { color: var(--color-on-dark-tertiary); }
+
+/* Dark surface fills — needed for hover:bg-hero-* etc. */
+@utility bg-hero           { background-color: var(--color-hero); }
+@utility bg-hero-secondary { background-color: var(--color-hero-secondary); }
+@utility bg-hero-overlay   { background-color: var(--color-hero-overlay); }
+
 @layer base {
     :root {
         --font-sans: 'DM Sans', system-ui, sans-serif;
@@ -11,9 +44,14 @@
         --color-hero-tertiary: #30302e;
         --color-hero-overlay: #16161e;
 
-        --color-accent: #5b6fff;
-        --color-accent-muted: #a8c4e0;
-        --color-accent-subtle: #7bafd4;
+        --color-accent: #7aab8e;
+        --color-accent-muted: #9dc4b0;
+        --color-accent-subtle: #4a7a5e;
+        --color-accent-ghost: rgba(122, 171, 142, 0.12);
+        --color-accent-dim:   rgba(122, 171, 142, 0.45);
+
+        /* Used for the Contact section radial gradient overlay */
+        --color-contact-gradient: rgba(22, 45, 74, 0.38);
 
         --color-surface: #ffffff;
         --color-surface-secondary: #f7f8fa;
@@ -41,11 +79,11 @@
         --section-px: 3rem;
         --section-py: 6rem;
 
-        --radius-card: 12px;
-        --radius-tag: 20px;
-        --radius-btn: 6px;
-        --radius-input: 8px;
-        --radius-panel: 10px;
+        --radius-card: 6px;
+        --radius-tag: 3px;
+        --radius-btn: 2px;
+        --radius-input: 4px;
+        --radius-panel: 4px;
     }
 
     * {
@@ -56,6 +94,43 @@
 
     html {
         scroll-behavior: smooth;
+        /* Fills the gutters beyond 1920px on ultra-wide monitors */
+        background-color: var(--color-hero);
+    }
+
+    /* ── Light mode overrides ──────────────────────────────────────────────
+       Dark is the default (no class needed). Adding .light to <html>
+       overrides every CSS variable — zero component changes required.
+    ───────────────────────────────────────────────────────────────────── */
+    html.light {
+        background-color: var(--color-hero);
+
+        /* Surfaces */
+        --color-hero:           #f5f5f7;
+        --color-hero-secondary: #ecedef;
+        --color-hero-tertiary:  #e4e5e8;
+        --color-hero-overlay:   #ffffff;
+        --color-hero-deep:      #d8e8f5;
+
+        /* "Snow" tokens become dark text on light backgrounds */
+        --color-on-dark-primary:   #0c0c10;
+        --color-on-dark-secondary: rgba(12, 12, 16, 0.60);
+        --color-on-dark-tertiary:  rgba(12, 12, 16, 0.38);
+        --color-snow-muted:        rgba(12, 12, 16, 0.08);
+
+        /* Borders */
+        --color-border-dark:       rgba(12, 12, 16, 0.10);
+        --color-border-dark-hover: rgba(12, 12, 16, 0.18);
+
+        /* Accent — darkened for legibility on light backgrounds */
+        --color-accent:       #3d7057;
+        --color-accent-muted: #4d8068;
+        --color-accent-subtle:#2d5d45;
+        --color-accent-ghost: rgba(61, 112, 87, 0.10);
+        --color-accent-dim:   rgba(61, 112, 87, 0.30);
+
+        /* Contact section radial overlay */
+        --color-contact-gradient: rgba(61, 112, 87, 0.07);
     }
 
     body {
@@ -195,17 +270,67 @@
     .section-padding {
         padding: var(--section-py) var(--section-px);
     }
+
+    @media (max-width: 768px) {
+        .section-padding {
+            padding: 4rem var(--section-px);
+        }
+    }
+
+    @media (max-width: 640px) {
+        .section-padding {
+            padding: 3rem var(--section-px);
+        }
+    }
+
     .px-section-x {
         padding-left: var(--section-px);
         padding-right: var(--section-px);
     }
+
+    @media (max-width: 640px) {
+        .px-section-x {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+    }
+
     .py-section-y {
         padding-top: var(--section-py);
         padding-bottom: var(--section-py);
     }
+
+    @media (max-width: 768px) {
+        .py-section-y {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .py-section-y {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+    }
+
     .py-hero-y {
         padding-top: 7rem;
         padding-bottom: 7rem;
+    }
+
+    @media (max-width: 768px) {
+        .py-hero-y {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .py-hero-y {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
     }
     .h-nav {
         height: var(--nav-height);
@@ -236,38 +361,120 @@
         line-height: 1.1;
         font-weight: 500;
     }
+
+    @media (max-width: 768px) {
+        .text-hero-name {
+            font-size: 36px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .text-hero-name {
+            font-size: 28px;
+        }
+    }
+
     .text-hero-role {
         font-size: 36px;
         line-height: 1.1;
         font-weight: 400;
     }
+
+    @media (max-width: 768px) {
+        .text-hero-role {
+            font-size: 24px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .text-hero-role {
+            font-size: 20px;
+        }
+    }
+
     .text-section-title {
         font-size: 32px;
         line-height: 1.2;
         font-weight: 500;
     }
+
+    @media (max-width: 768px) {
+        .text-section-title {
+            font-size: 26px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .text-section-title {
+            font-size: 22px;
+        }
+    }
+
     .text-nav {
         font-size: 13px;
         line-height: 1.4;
         letter-spacing: 0.03em;
     }
+
+    @media (max-width: 640px) {
+        .text-nav {
+            font-size: 12px;
+        }
+    }
+
     .text-label {
         font-size: 11px;
         line-height: 1.4;
         letter-spacing: 0.12em;
         font-weight: 500;
     }
+
+    @media (max-width: 640px) {
+        .text-label {
+            font-size: 10px;
+            letter-spacing: 0.1em;
+        }
+    }
+
     .text-tag {
         font-size: 11px;
         line-height: 1.4;
     }
+
+    @media (max-width: 640px) {
+        .text-tag {
+            font-size: 10px;
+        }
+    }
+
     .text-body {
         font-size: 15px;
         line-height: 1.8;
     }
+
+    @media (max-width: 768px) {
+        .text-body {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .text-body {
+            font-size: 13px;
+            line-height: 1.6;
+        }
+    }
+
     .text-small {
         font-size: 12px;
         line-height: 1.5;
+    }
+
+    @media (max-width: 640px) {
+        .text-small {
+            font-size: 11px;
+        }
     }
 
     .label-text {
@@ -287,6 +494,17 @@
         color: var(--color-text-secondary);
         border: 0.5px solid var(--color-border);
         margin: 3px 3px 3px 0;
+    }
+
+    .border-accent {
+        border-color: var(--color-accent);
+    }
+
+    .bg-accent-ghost {
+        background-color: var(--color-accent-ghost);
+    }
+    .border-accent-dim {
+        border-color: var(--color-accent-dim);
     }
 
     .border-thin {
@@ -329,5 +547,46 @@
 
     .ease-base {
         transition-timing-function: ease;
+    }
+
+    @keyframes slideInFromTop {
+        from {
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .animate-in {
+        animation: slideInFromTop 0.2s ease-out;
+    }
+
+    .fade-in {
+        animation: fadeIn 0.2s ease-out;
+    }
+
+    .slide-in-from-top-1 {
+        animation: slideInFromTop 0.2s ease-out;
+    }
+
+    .duration-200 {
+        animation-duration: 0.2s;
+    }
+
+    .hero-dot-grid {
+        background-image: radial-gradient(rgba(122, 171, 142, 0.055) 1px, transparent 1px);
+        background-size: 28px 28px;
     }
 }

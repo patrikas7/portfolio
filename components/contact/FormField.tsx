@@ -10,11 +10,15 @@ type FormFieldProps = {
     register: UseFormRegister<ContactFormData>;
     error?: string;
     maxLength?: number;
+    charCount?: number;
 };
 
-const FormField = ({ id, label, placeholder, type = 'text', isTextarea, register, error, maxLength }: FormFieldProps) => {
+const FormField = ({ id, label, placeholder, type = 'text', isTextarea, register, error, maxLength, charCount }: FormFieldProps) => {
+    const errorId = `${id}-error`;
     const baseInputClasses = `px-4 py-3 rounded-input border bg-hero-secondary text-snow placeholder-snow-tertiary focus:outline-none transition-all duration-base w-full ${
-        error ? 'border-red-500 focus:ring-1 focus:ring-red-500' : 'border-thin-dark focus:border-accent focus:ring-1 focus:ring-accent'
+        error
+            ? 'border-red-500/60 focus:border-red-500 focus:ring-1 focus:ring-red-500/50'
+            : 'border-stroke-dark-hover focus:border-accent focus:ring-1 focus:ring-accent/40'
     }`;
 
     return (
@@ -23,18 +27,36 @@ const FormField = ({ id, label, placeholder, type = 'text', isTextarea, register
                 {label}
             </label>
             {isTextarea ? (
-                <textarea
+                <div className='relative'>
+                    <textarea
+                        id={id}
+                        placeholder={placeholder}
+                        rows={5}
+                        {...register(id)}
+                        className={`${baseInputClasses} resize-none`}
+                        maxLength={maxLength}
+                        aria-invalid={!!error}
+                        aria-describedby={error ? errorId : undefined}
+                    />
+                    {maxLength !== undefined && charCount !== undefined && (
+                        <span aria-hidden='true' className='absolute bottom-2.5 right-3 text-small text-snow-tertiary pointer-events-none tabular-nums'>
+                            {charCount} / {maxLength}
+                        </span>
+                    )}
+                </div>
+            ) : (
+                <input
+                    type={type}
                     id={id}
                     placeholder={placeholder}
-                    rows={5}
                     {...register(id)}
-                    className={`${baseInputClasses} resize-none`}
+                    className={baseInputClasses}
                     maxLength={maxLength}
+                    aria-invalid={!!error}
+                    aria-describedby={error ? errorId : undefined}
                 />
-            ) : (
-                <input type={type} id={id} placeholder={placeholder} {...register(id)} className={baseInputClasses} maxLength={maxLength} />
             )}
-            {error && <span className='text-small text-red-500'>{error}</span>}
+            {error && <span id={errorId} role='alert' className='text-small text-red-400'>{error}</span>}
         </div>
     );
 };

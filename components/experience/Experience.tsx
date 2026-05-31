@@ -1,9 +1,8 @@
 import { getTranslations } from 'next-intl/server';
-import BulletList from './BulletList';
-import TagsList from './TagsList';
 import SectionHeader from '../UI/SectionHeader';
+import ExperienceTimeline from './ExperienceTimeline';
 
-type ExperienceItem = {
+type ExperienceEntry = {
     period: string;
     typeKey: string;
     roleKey: string;
@@ -12,7 +11,7 @@ type ExperienceItem = {
     tags?: string[];
 };
 
-const experiences: ExperienceItem[] = [
+const experiences: ExperienceEntry[] = [
     {
         period: '2026 – dabar',
         typeKey: 'fulltime',
@@ -62,27 +61,20 @@ const experiences: ExperienceItem[] = [
 const Experience = async () => {
     const t = await getTranslations('experience');
 
+    const items = experiences.map(exp => ({
+        period: exp.period,
+        type: t(exp.typeKey),
+        role: t(exp.roleKey),
+        company: exp.company,
+        bullets: exp.bulletKeys?.map(k => t(k)),
+        tags: exp.tags,
+        isFulltime: exp.typeKey === 'fulltime',
+    }));
+
     return (
-        <section id='experience' className='bg-hero-secondary px-section-x py-section-y'>
-            <SectionHeader label={t('label')} title={t('title')} />
-            <div className='flex flex-col'>
-                {experiences.map((item, index) => (
-                    <div key={index} className='flex gap-40 py-10'>
-                        <div>
-                            <p className='text-sm text-snow-secondary'>{item.period}</p>
-                            <p className='text-sm text-snow-tertiary'>{t(item.typeKey)}</p>
-                        </div>
-
-                        <div className='flex flex-col gap-1'>
-                            <h3 className='text-body text-snow font-bold'>{t(item.roleKey)}</h3>
-                            <p className='text-body text-snow-secondary leading-relaxed'>{item.company}</p>
-
-                            {item.bulletKeys && <BulletList bulletKeys={item.bulletKeys} t={t} />}
-                            {item.tags && <TagsList tags={item.tags} />}
-                        </div>
-                    </div>
-                ))}
-            </div>
+        <section id='experience' aria-labelledby='experience-heading' className='bg-hero px-section-x py-section-y'>
+            <SectionHeader label={t('label')} title={t('title')} headingId='experience-heading' />
+            <ExperienceTimeline items={items} />
         </section>
     );
 };
