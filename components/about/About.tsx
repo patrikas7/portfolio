@@ -20,9 +20,7 @@ const About = async () => {
                 </div>
 
                 <div className='lg:col-span-2'>
-                    <div className='grid grid-cols-2 gap-x-8 gap-y-10'>
-                        <StatsList />
-                    </div>
+                    <StatsList />
                 </div>
             </div>
         </section>
