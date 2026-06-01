@@ -1,5 +1,6 @@
 import { ButtonHTMLAttributes, AnchorHTMLAttributes, ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
+import Link from 'next/link';
 
 type ButtonVariant = 'primary' | 'ghost';
 
@@ -27,9 +28,9 @@ const Button = ({ onClick, className, children, href, variant = 'primary', ...pr
 
     if (href) {
         return (
-            <a href={href} className={mergedClassName} {...props}>
+            <Link href={href} className={mergedClassName} {...props}>
                 {children}
-            </a>
+            </Link>
         );
     }
 
