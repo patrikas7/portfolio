@@ -1,3 +1,4 @@
+import { twMerge } from 'tailwind-merge';
 import { ContactFormData } from '@/schemas/contact';
 import { UseFormRegister } from 'react-hook-form';
 
@@ -15,11 +16,12 @@ type FormFieldProps = {
 
 const FormField = ({ id, label, placeholder, type = 'text', isTextarea, register, error, maxLength, charCount }: FormFieldProps) => {
     const errorId = `${id}-error`;
-    const baseInputClasses = `px-4 py-3 rounded-input border bg-hero-secondary text-snow placeholder-snow-tertiary focus:outline-none transition-all duration-base w-full ${
+    const inputCls = twMerge(
+        'px-4 py-3 rounded-input border bg-hero-secondary text-snow placeholder-snow-tertiary focus:outline-none transition-all duration-base w-full',
         error
             ? 'border-red-500/60 focus:border-red-500 focus:ring-1 focus:ring-red-500/50'
-            : 'border-stroke-dark-hover focus:border-accent focus:ring-1 focus:ring-accent/40'
-    }`;
+            : 'border-stroke-dark-hover focus:border-accent focus:ring-1 focus:ring-accent/40',
+    );
 
     return (
         <div className='flex flex-col gap-2'>
@@ -33,7 +35,7 @@ const FormField = ({ id, label, placeholder, type = 'text', isTextarea, register
                         placeholder={placeholder}
                         rows={5}
                         {...register(id)}
-                        className={`${baseInputClasses} resize-none`}
+                        className={twMerge(inputCls, 'resize-none')}
                         maxLength={maxLength}
                         aria-invalid={!!error}
                         aria-describedby={error ? errorId : undefined}
@@ -50,7 +52,7 @@ const FormField = ({ id, label, placeholder, type = 'text', isTextarea, register
                     id={id}
                     placeholder={placeholder}
                     {...register(id)}
-                    className={baseInputClasses}
+                    className={inputCls}
                     maxLength={maxLength}
                     aria-invalid={!!error}
                     aria-describedby={error ? errorId : undefined}

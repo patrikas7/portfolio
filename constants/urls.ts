@@ -5,3 +5,7 @@ export const NAVIGATION_LINKS = {
     services: '#services',
     contacts: '#contacts',
 } as const;
+
+export const API_ROUTES = {
+    contact: '/api/contact',
+} as const;

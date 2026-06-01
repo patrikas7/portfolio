@@ -4,14 +4,15 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
-import { IoCheckmarkCircleOutline } from 'react-icons/io5';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 import { createContactSchema, type ContactFormData } from '@/schemas/contact';
-import FormField from './FormField';
+import { API_ROUTES } from '@/constants/urls';
+import FormField from '../UI/FormField';
 import Button from '../UI/Button';
 import SectionHeader from '../UI/SectionHeader';
 import ContactInfo from './ContactInfo';
+import ContactSuccess from './ContactSuccess';
 
 type SubmitState = 'idle' | 'success' | 'error';
 
@@ -35,7 +36,7 @@ const Contact = () => {
     const onSubmit = async (data: ContactFormData) => {
         setIsSubmitting(true);
         try {
-            const res = await fetch('/api/contact', {
+            const res = await fetch(API_ROUTES.contact, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
@@ -63,23 +64,10 @@ const Contact = () => {
             <SectionHeader label={t('label')} title={t('title')} description={t('description')} headingId='contacts-heading' />
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20'>
-                <div className='flex flex-col'>
-                    <ContactInfo />
-                </div>
+                <ContactInfo />
 
                 {submitState === 'success' ? (
-                    <div role='status' aria-live='polite' className='flex flex-col items-center justify-center gap-6 py-10 text-center'>
-                        <div className='flex items-center justify-center w-16 h-16 rounded-full bg-accent-ghost border border-accent-dim'>
-                            <IoCheckmarkCircleOutline aria-hidden='true' className='text-accent' size={34} />
-                        </div>
-                        <div className='flex flex-col gap-2'>
-                            <h3 className='text-snow text-xl font-semibold'>{t('successTitle')}</h3>
-                            <p className='text-snow-secondary text-body'>{t('successMessage')}</p>
-                        </div>
-                        <Button variant='ghost' onClick={() => setSubmitState('idle')}>
-                            {t('sendAnother')}
-                        </Button>
-                    </div>
+                    <ContactSuccess onReset={() => setSubmitState('idle')} />
                 ) : (
                     <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-6' noValidate>
                         <FormField
@@ -90,7 +78,6 @@ const Contact = () => {
                             error={errors.name?.message}
                             maxLength={100}
                         />
-
                         <FormField
                             id='email'
                             type='email'
@@ -99,7 +86,6 @@ const Contact = () => {
                             register={register}
                             error={errors.email?.message}
                         />
-
                         <FormField
                             id='message'
                             isTextarea
@@ -121,7 +107,10 @@ const Contact = () => {
                             aria-label={isSubmitting ? t('submitting') : undefined}
                             className='flex items-center justify-center w-full'
                         >
-                            {isSubmitting ? <AiOutlineLoading3Quarters aria-hidden='true' className='animate-spin' size={20} /> : t('submitButton')}
+                            {isSubmitting
+                                ? <AiOutlineLoading3Quarters aria-hidden='true' className='animate-spin' size={20} />
+                                : t('submitButton')
+                            }
                         </Button>
                     </form>
                 )}
