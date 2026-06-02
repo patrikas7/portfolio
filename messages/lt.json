@@ -9,7 +9,7 @@
     "hero": {
         "badge": "Prieinamas freelance projektams",
         "name": "Patrikas",
-        "role": "Full-stack kūrėjas",
+        "role": "Full-stack programuotojas",
         "description": "Kuriu full-stack web produktus — nuo architektūros iki paleidimo. SaaS platformos, turinio svetainės, vidiniai įrankiai — esu prieinamas freelance projektams, kuriuos galiu valdyti nuo pradžios iki pabaigos.",
         "ctaPrimary": "Susisiekite",
         "ctaSecondary": "Peržiūrėti patirtį"
@@ -17,7 +17,7 @@
     "about": {
         "label": "Apie mane",
         "title": "Šiek tiek apie save",
-        "paragraph1": "Esu full-stack kūrėjas su 4+ metų patirtimi. Dirbau produktų įmonėse su didelės apimties web infrastruktūra ir kūriau freelance projektus nuo nulio — priimdamas architektūros sprendimus, integruodamas mokėjimo sistemas ir trečiųjų šalių paslaugas, ir paleisdamas į produkciją.",
+        "paragraph1": "Esu full-stack programuotojas su 4+ metų patirtimi. Dirbau produktų įmonėse su didelės apimties web infrastruktūra ir kūriau freelance projektus nuo nulio — priimdamas architektūros sprendimus, integruodamas mokėjimo sistemas ir trečiųjų šalių paslaugas, ir paleisdamas į produkciją.",
         "paragraph2": "Imuosi projektų, kuriuos galiu valdyti nuo pradžios iki pabaigos. Tai reiškia priimti tinkamus techninius sprendimus anksti, rašyti kodą, kuris nevirs problema vėliau, ir nuolat informuoti klientus.",
         "bring1Title": "Pilnas projekto valdymas",
         "bring1Desc": "Nuo architektūros sprendimų iki paleidimo į produkciją. Tvarkau kiekvieną produkto techninį lygmenį.",
@@ -98,7 +98,7 @@
         "errorMessage": "Kažkas nutiko ne taip. Bandyk dar kartą arba rašyk tiesiai el. paštu.",
         "submitting": "Siunčiama...",
         "opensInNewTab": "atsidaro naujame skirtuke",
-        "email": "patrikas@gmail.com",
+        "email": "patrikasvoicechovski@gmail.com",
         "linkedin": "linkedin.com/in/patrikas-voicechovski",
         "location": "Lietuva",
         "validation": {
@@ -116,7 +116,7 @@
         }
     },
     "footer": {
-        "tagline": "Frontend kūrėjas, prieinamas freelance projektams.",
+        "tagline": "Frontend programuotojas, prieinamas freelance projektams.",
         "navigation": "Navigacija",
         "aboutMe": "Apie mane",
         "experience": "Patirtis",
