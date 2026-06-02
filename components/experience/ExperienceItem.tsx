@@ -15,7 +15,7 @@ type ExperienceItemPops = {
 };
 
 const ExperienceItem = ({ item, index }: ExperienceItemPops) => (
-    <motion.div {...itemAnimation(index)} className='grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-y-3 gap-x-12 lg:gap-x-20 py-8 sm:py-10'>
+    <motion.div {...itemAnimation(index)} className='grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-y-3 gap-x-12 lg:gap-x-20 py-8 sm:py-10 border-b border-stroke-dark last:border-b-0'>
         <div className='flex sm:flex-col gap-3 sm:pt-1'>
             <span className='font-mono text-xs text-snow-secondary tracking-wide shrink-0'>{item.period}</span>
             <span
@@ -35,8 +35,8 @@ const ExperienceItem = ({ item, index }: ExperienceItemPops) => (
             {item.bullets && item.bullets.length > 0 && (
                 <ul className='flex flex-col gap-3 mb-5'>
                     {item.bullets.map((bullet, i) => (
-                        <li key={i} className='flex items-start gap-3 text-sm text-snow-secondary leading-relaxed'>
-                            <span aria-hidden='true' className='mt-1.25 w-1 h-1 rounded-full bg-accent shrink-0' />
+                        <li key={i} className='flex items-center gap-3 text-sm text-snow-secondary leading-relaxed '>
+                            <span aria-hidden='true' className=' w-1 h-1 rounded-full bg-accent shrink-0' />
                             {bullet}
                         </li>
                     ))}

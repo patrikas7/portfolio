@@ -13,7 +13,7 @@ export type ExperienceItemData = {
 };
 
 const ExperienceTimeline = ({ items }: { items: ExperienceItemData[] }) => (
-    <div className='flex flex-col divide-y divide-stroke-dark'>
+    <div className='flex flex-col'>
         {items.map((item, index) => (
             <ExperienceItem key={index} item={item} index={index} />
         ))}

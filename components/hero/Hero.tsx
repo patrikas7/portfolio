@@ -49,7 +49,7 @@ const Hero = () => {
                 </motion.h2>
 
                 <motion.p
-                    className='text-sm sm:text-base md:text-body text-snow-secondary max-w-xs sm:max-w-sm md:max-w-md leading-relaxed mb-8 sm:mb-10'
+                    className='text-sm sm:text-base md:text-body text-snow-secondary max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-none leading-relaxed mb-8 sm:mb-10'
                     {...fadeUp(ANIM_BASE + ANIM_STEP * 3)}
                 >
                     {t('description')}

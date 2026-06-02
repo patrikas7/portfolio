@@ -7,7 +7,7 @@ const Experience = async () => {
     const t = await getTranslations('experience');
 
     const items = EXPERIENCES.map(exp => ({
-        period: exp.period,
+        period: exp.isCurrent ? `${exp.period} – ${t('present')}` : exp.period,
         type: t(exp.typeKey),
         role: t(exp.roleKey),
         company: exp.company,

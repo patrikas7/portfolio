@@ -10,7 +10,7 @@ const Services = async () => {
             <SectionHeader label={t('label')} title={t('title')} headingId='services-heading' />
 
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6'>
-                {SERVICES.map(({ icon: Icon, titleKey, descKey, bulletKeys }) => (
+                {SERVICES.map(({ icon: Icon, titleKey, descKey }) => (
                     <div
                         key={titleKey}
                         className='group flex flex-col gap-6 p-7 rounded-card border border-stroke-dark hover:border-accent-dim transition-colors duration-200'
@@ -27,15 +27,6 @@ const Services = async () => {
                                 {t(descKey)}
                             </p>
                         </div>
-
-                        <ul className='flex flex-col gap-2.5 mt-auto pt-2 border-t border-stroke-dark'>
-                            {bulletKeys.map(key => (
-                                <li key={key} className='flex items-start gap-2.5 text-sm text-snow-secondary'>
-                                    <span aria-hidden='true' className='mt-[5px] w-1 h-1 rounded-full bg-accent flex-shrink-0' />
-                                    {t(key)}
-                                </li>
-                            ))}
-                        </ul>
                     </div>
                 ))}
             </div>

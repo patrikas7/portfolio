@@ -10,23 +10,28 @@
         "badge": "Prieinamas freelance projektams",
         "name": "Patrikas",
         "role": "Full-stack kūrėjas",
-        "description": "4+ metų patirtis kuriant modernius web taikymus naudojant React, Next.js ir Node.js.",
+        "description": "Kuriu full-stack web produktus — nuo architektūros iki paleidimo. SaaS platformos, turinio svetainės, vidiniai įrankiai — esu prieinamas freelance projektams, kuriuos galiu valdyti nuo pradžios iki pabaigos.",
         "ctaPrimary": "Susisiekite",
         "ctaSecondary": "Peržiūrėti patirtį"
     },
     "about": {
         "label": "Apie mane",
         "title": "Šiek tiek apie save",
-        "paragraph1": "Aš frontend kūrėjas su full-stack patirtimi, šiuo metu dirbantis Oxylabs.io ir atidaras freelance projektams. Pastaraisiais dviem metais subalansinau etatinį darbą su iki 30 val./savaitę atlikt freelance darbu — architektūrindamas SaaS produktus, integruodamas mokėjimo sistemas ir konstruodamas pilnus sprendimus nuo nulio.",
-        "paragraph2": "Man patinka kurti greitus, švarius ir gerai struktūrizuotus projektus. Dirbu atidžiai ir bendrauju aiškiai.",
-        "stat1": "Metų patirtis",
-        "stat2": "Sėkmingi freelance projektai",
-        "stat3": "Maks. freelance per savaitę",
-        "stat4": "Architektūros patirtis"
+        "paragraph1": "Esu full-stack kūrėjas su 4+ metų patirtimi. Dirbau produktų įmonėse su didelės apimties web infrastruktūra ir kūriau freelance projektus nuo nulio — priimdamas architektūros sprendimus, integruodamas mokėjimo sistemas ir trečiųjų šalių paslaugas, ir paleisdamas į produkciją.",
+        "paragraph2": "Imuosi projektų, kuriuos galiu valdyti nuo pradžios iki pabaigos. Tai reiškia priimti tinkamus techninius sprendimus anksti, rašyti kodą, kuris nevirs problema vėliau, ir nuolat informuoti klientus.",
+        "bring1Title": "Pilnas projekto valdymas",
+        "bring1Desc": "Nuo architektūros sprendimų iki paleidimo į produkciją. Tvarkau kiekvieną produkto techninį lygmenį.",
+        "bring2Title": "Realaus pasaulio sudėtingumas",
+        "bring2Desc": "Mokėjimo sistemos, autentifikacija, trečiųjų šalių integracijos — tai jau esu darę.",
+        "bring3Title": "Aiškus bendravimas",
+        "bring3Desc": "Žinote projekto eigą nepraėję prašinėti atnaujinimų.",
+        "bring4Title": "Kodas, kuris tarnauja ilgai",
+        "bring4Desc": "Švari struktūra ir palaikomos schemos — ne greiti sprendimai, kurių vėliau gailėsite."
     },
     "experience": {
         "label": "Patirtis",
         "title": "Kur dirbau",
+        "present": "Dabar",
 
         "fulltime": "Etatinis",
         "freelance": "Freelance",
@@ -39,18 +44,18 @@
         "role_festo_junior": "Frontend Developer",
 
         "festo_b1": "JS → TypeScript migracija",
-        "festo_b2": "Bundle optimizacija",
-        "festo_b3": "React versijų atnaujinimai",
+        "festo_b2": "Mikrofrontend modulių kūrimas daugiakomandinėje aplinkoje",
+        "festo_b3": "Naujų frontend kūrėjų įvedimas ir mentorystė",
 
         "saas_b1": "Pilna SaaS architektūra nuo nulio",
         "saas_b2": "Stripe mokėjimai, rolių valdymas",
         "saas_b3": "Admin posistemė, i18n, Headless CMS",
 
         "web_b1": "Next.js su Headless CMS integracija",
-        "web_b2": "Internacionalizacija ir responsive dizainas",
+        "web_b2": "Vidinių įrankių kūrimas ir responsive dizainas",
 
         "toughlex_b1": "Frontend ir backend funkcijų kūrimas",
-        "toughlex_b2": "React frontend, Node.js/Express backend",
+        "toughlex_b2": "React frontend, .NET Framework mikrositemsų backend",
 
         "festo_junior_b1": "UI komponentų kūrimas ir priežiūra",
         "festo_junior_b2": "Bendradarbiavimas su backend komanda"
@@ -66,37 +71,25 @@
         "label": "Paslaugos",
         "title": "Ką galiu sukurti",
         "card1Title": "Web programa",
-        "card1Desc": "Vietos žymeklis — aprašykite web programos paslaugą čia.",
-        "card1_b1": "Vietos žymeklis 1",
-        "card1_b2": "Vietos žymeklis 2",
-        "card1_b3": "Vietos žymeklis 3",
+        "card1Desc": "Pilnas web programų kūrimas — nuo duomenų bazės ir API dizaino iki išbaigto, greito frontend. Sukurta augti.",
         "card2Title": "SaaS produktas",
-        "card2Desc": "Vietos žymeklis — aprašykite SaaS produkto paslaugą čia.",
-        "card2_b1": "Vietos žymeklis 1",
-        "card2_b2": "Vietos žymeklis 2",
-        "card2_b3": "Vietos žymeklis 3",
-        "card3Title": "Rinkodaros svetainė",
-        "card3Desc": "Vietos žymeklis — aprašykite rinkodaros svetainės paslaugą čia.",
-        "card3_b1": "Vietos žymeklis 1",
-        "card3_b2": "Vietos žymeklis 2",
-        "card3_b3": "Vietos žymeklis 3",
+        "card2Desc": "Pilni SaaS produktai nuo nulio — nuo vartotojų paskyrų ir mokėjimų iki pilno valdymo skydelio, paruošto paleisti.",
+        "card3Title": "Integracijos",
+        "card3Desc": "Individualios integracijos, jungiančios jūsų verslo įrankius — Slack, Jira ir išorines paslaugas — į automatizuotus darbo srautus, suplanuotas užduotis ir vidinius ataskaitų sistemas.",
         "card4Title": "Mobilė programa",
-        "card4Desc": "Vietos žymeklis — aprašykite mobilios programos paslaugą čia.",
-        "card4_b1": "Vietos žymeklis 1",
-        "card4_b2": "Vietos žymeklis 2",
-        "card4_b3": "Vietos žymeklis 3"
+        "card4Desc": "Mobiliosios programos iOS ir Android — sukurtos išplėsti jūsų produktą ar paslaugą už naršyklės ribų į vartotojų telefonus."
     },
     "contact": {
         "label": "Kontaktai",
         "title": "Susisiekime",
-        "description": "Turi projektą ar klausimą? Parašyk — atsakau per 24 val.",
-        "availability": "Prieinamas galimybėms",
-        "contactIntro": "Atidaras freelance projektams ir etatiniam darbui. Atsakau į visas žinutes per 24 valandas.",
+        "description": "Turi projektą galvoje? Parašyk man — atsakau per 24 valandas.",
+        "availability": "Prieinamas freelance projektams",
+        "contactIntro": "Prieinamas freelance projektams — web produktai, SaaS platformos ir integracijos. Atsakau į visas žinutes per 24 valandas.",
         "formName": "Vardas",
         "formEmail": "El. paštas",
         "formMessage": "Žinutė",
-        "namePlaceholder": "Jonas",
-        "emailPlaceholder": "jonas@email.lt",
+        "namePlaceholder": "Jūsų vardas",
+        "emailPlaceholder": "Jūsų el. paštas",
         "messagePlaceholder": "Aprašyk projektą...",
         "submitButton": "Siųsti žinutę",
         "successTitle": "Žinutė išsiųsta!",
@@ -107,7 +100,20 @@
         "opensInNewTab": "atsidaro naujame skirtuke",
         "email": "patrikas@gmail.com",
         "linkedin": "linkedin.com/in/patrikas-voicechovski",
-        "location": "Lietuva"
+        "location": "Lietuva",
+        "validation": {
+            "name": {
+                "min": "Vardas turi būti bent 2 simbolių",
+                "max": "Vardas turi būti trumpesnis nei 100 simbolių"
+            },
+            "email": {
+                "invalid": "Įveskite galiojantį el. pašto adresą"
+            },
+            "message": {
+                "min": "Žinutė turi būti bent 10 simbolių",
+                "max": "Žinutė turi būti trumpesnė nei 5000 simbolių"
+            }
+        }
     },
     "footer": {
         "tagline": "Frontend kūrėjas, prieinamas freelance projektams.",

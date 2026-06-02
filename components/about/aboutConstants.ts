@@ -1,6 +1,6 @@
-export const STATS = [
-    { value: '4+', labelKey: 'stat1' },
-    { value: '2', labelKey: 'stat2' },
-    { value: '30h', labelKey: 'stat3' },
-    { value: 'SaaS', labelKey: 'stat4' },
+export const WHAT_I_BRING = [
+    { titleKey: 'bring1Title', descKey: 'bring1Desc' },
+    { titleKey: 'bring2Title', descKey: 'bring2Desc' },
+    { titleKey: 'bring3Title', descKey: 'bring3Desc' },
+    { titleKey: 'bring4Title', descKey: 'bring4Desc' },
 ];
