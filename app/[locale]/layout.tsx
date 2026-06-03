@@ -5,6 +5,7 @@ import '../../globals.css';
 import { DM_Sans, DM_Mono } from 'next/font/google';
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
+import { Analytics } from '@vercel/analytics/next';
 import { generateMetadata } from './metadata';
 
 export { generateMetadata };
@@ -43,6 +44,7 @@ export default async function RootLayout({
                     <Header />
                     <main id='main-content'>{children}</main>
                     <Footer />
+                    <Analytics />
                 </NextIntlClientProvider>
             </body>
         </html>
