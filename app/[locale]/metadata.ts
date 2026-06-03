@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
         openGraph: {
             type: 'website',
-            url: `${BASE_URL}/${l}`,
+            url: l === 'en' ? BASE_URL : `${BASE_URL}/${l}`,
             title,
             description,
             locale: ogLocales[l],
@@ -61,9 +61,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         },
 
         alternates: {
-            canonical: `${BASE_URL}/${l}`,
+            canonical: l === 'en' ? BASE_URL : `${BASE_URL}/${l}`,
             languages: {
-                en: `${BASE_URL}/en`,
+                en: BASE_URL,
                 lt: `${BASE_URL}/lt`,
             },
         },

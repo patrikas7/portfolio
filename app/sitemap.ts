@@ -5,13 +5,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return [
         {
-            url: `${BASE_URL}/en`,
+            url: `${BASE_URL}`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 1,
             alternates: {
                 languages: {
-                    en: `${BASE_URL}/en`,
+                    en: `${BASE_URL}`,
                     lt: `${BASE_URL}/lt`,
                 },
             },
@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
             alternates: {
                 languages: {
-                    en: `${BASE_URL}/en`,
+                    en: `${BASE_URL}`,
                     lt: `${BASE_URL}/lt`,
                 },
             },
