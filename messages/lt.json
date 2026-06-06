@@ -22,9 +22,9 @@
         "bring1Title": "Pilnas projekto valdymas",
         "bring1Desc": "Nuo architektūros sprendimų iki paleidimo į produkciją. Tvarkau kiekvieną produkto techninį lygmenį.",
         "bring2Title": "Realaus pasaulio sudėtingumas",
-        "bring2Desc": "Mokėjimo sistemos, autentifikacija, trečiųjų šalių integracijos — tai jau esu darę.",
+        "bring2Desc": "Mokėjimo sistemos, autentifikacija, trečiųjų šalių integracijos — tai jau esu daręs.",
         "bring3Title": "Aiškus bendravimas",
-        "bring3Desc": "Žinote projekto eigą nepraėję prašinėti atnaujinimų.",
+        "bring3Desc": "Žinote projekto eigą, nereikdami prašinėti atnaujinimų.",
         "bring4Title": "Kodas, kuris tarnauja ilgai",
         "bring4Desc": "Švari struktūra ir palaikomos schemos — ne greiti sprendimai, kurių vėliau gailėsite."
     },
@@ -55,7 +55,7 @@
         "web_b2": "Vidinių įrankių kūrimas ir responsive dizainas",
 
         "toughlex_b1": "Frontend ir backend funkcijų kūrimas",
-        "toughlex_b2": "React frontend, .NET Framework mikrositemsų backend",
+        "toughlex_b2": "React frontend, .NET Framework mikroservisų backend",
 
         "festo_junior_b1": "UI komponentų kūrimas ir priežiūra",
         "festo_junior_b2": "Bendradarbiavimas su backend komanda"
@@ -71,12 +71,12 @@
         "label": "Paslaugos",
         "title": "Ką galiu sukurti",
         "card1Title": "Web programa",
-        "card1Desc": "Pilnas web programų kūrimas — nuo duomenų bazės ir API dizaino iki išbaigto, greito frontend. Sukurta augti.",
+        "card1Desc": "Pilnas web programų kūrimas — nuo duomenų bazės ir API dizaino iki išbaigto, greito frontend. Sukurta augimui.",
         "card2Title": "SaaS produktas",
         "card2Desc": "Pilni SaaS produktai nuo nulio — nuo vartotojų paskyrų ir mokėjimų iki pilno valdymo skydelio, paruošto paleisti.",
         "card3Title": "Integracijos",
-        "card3Desc": "Individualios integracijos, jungiančios jūsų verslo įrankius — Slack, Jira ir išorines paslaugas — į automatizuotus darbo srautus, suplanuotas užduotis ir vidinius ataskaitų sistemas.",
-        "card4Title": "Mobilė programa",
+        "card3Desc": "Individualios integracijos, jungiančios jūsų verslo įrankius — Slack, Jira ir išorines paslaugas — į automatizuotus darbo srautus, suplanuotas užduotis ir vidines ataskaitų sistemas.",
+        "card4Title": "Mobiliosios aplikacijos",
         "card4Desc": "Mobiliosios programos iOS ir Android — sukurtos išplėsti jūsų produktą ar paslaugą už naršyklės ribų į vartotojų telefonus."
     },
     "contact": {
@@ -116,7 +116,7 @@
         }
     },
     "footer": {
-        "tagline": "Frontend programuotojas, prieinamas freelance projektams.",
+        "tagline": "Full-stack programuotojas, prieinamas freelance projektams.",
         "navigation": "Navigacija",
         "aboutMe": "Apie mane",
         "experience": "Patirtis",
